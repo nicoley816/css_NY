@@ -1,6 +1,6 @@
-<div>
+<div class="row">
   <% for post in @posts %>
-    <div>
+    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
       <h4>
         <%# Display the name of the user that created the post: %>
         <%# 1. find user who created post %>
@@ -12,7 +12,7 @@
           anonymous
         <% end %>
       </h4>
-      <img src="<%= post["image"] %>">
+      <img src="<%= post["image"] %>" class="img-fluid" alt="<%= post["image"] %>">
       <p><%= post["body"] %></p>
     </div>
   <% end %>
