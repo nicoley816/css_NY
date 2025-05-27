@@ -1,0 +1,20 @@
+<h1>New Post</h1>
+
+<% if @user != nil %>
+  <form action="/posts" method="post">
+    <p>
+      <label for="body_input">Body</label>
+      <input type="text" name="body" id="body_input">
+    </p>
+
+    <p>
+      <label for="image_input">Image URL</label>
+      <input type="text" name="image" id="image_input">
+    </p>
+
+    <button>Save</button>
+    <a href="/posts">Cancel</a>
+  </form>
+<% else %>
+  You must first <a href="/login">login</a> to post.
+<% end %>
